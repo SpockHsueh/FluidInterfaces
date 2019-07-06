@@ -22,7 +22,6 @@ class CalculatorButtonInterfaceViewController: InterfaceViewController {
         view.addSubview(calculatorButton)
         calculatorButton.center(in: view)
     }
-
 }
 
 class CalculatorButton: UIControl {
@@ -43,8 +42,8 @@ class CalculatorButton: UIControl {
     
     private var animator = UIViewPropertyAnimator()
     
-    private let normalColor = UIColor(hex: 0x333333)
-    private let highlightedColor = UIColor(hex: 0x737373)
+    private let normalColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    private let highlightedColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
