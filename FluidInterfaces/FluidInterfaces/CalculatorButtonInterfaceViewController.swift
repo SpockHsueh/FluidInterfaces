@@ -73,11 +73,13 @@ class CalculatorButton: UIControl {
         layer.cornerRadius = bounds.width / 2
     }
     
+    // Cancel the existing animation if needed, and instantly set the color to the highlighted color
     @objc private func touchDown() {
         animator.stopAnimation(true)
         backgroundColor = highlightedColor
     }
     
+    // Create a new animator and start the animation, Using the (UIViewPropertyAnimatior)
     @objc private func touchUp() {
         animator = UIViewPropertyAnimator(duration: 0.5, curve: .easeIn, animations: {
             self.backgroundColor = self.normalColor
